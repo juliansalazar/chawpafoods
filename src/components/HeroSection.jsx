@@ -6,7 +6,7 @@ import './HeroSection.css';
 
 const PanDeYucaDesformado = () => {
   const sphereRef = useRef();
-  const colorMap = useLoader(TextureLoader, './src/assets/textura.png');
+  const colorMap = useLoader(TextureLoader, '/public/textura.png');
 
   useFrame(() => {
     if (sphereRef.current) {
@@ -28,7 +28,7 @@ const PanDeYucaDesformado = () => {
 };
 
 const LogoOnEquator = ({ position }) => {  
-  const texture = useLoader(TextureLoader, '/src/assets/logo.png'); // Ruta del logo y tamaño grande
+  const texture = useLoader(TextureLoader, '/public/logo.png'); // Ruta del logo y tamaño grande
 
   return (
     <Plane args={[1.5, 1.5]} position={position}>
