@@ -6,7 +6,7 @@ import './HeroSection.css';
 
 const PanDeYucaDesformado = () => {
   const sphereRef = useRef();
-  const colorMap = useLoader(TextureLoader, '/src/assets/textura.png');
+  const colorMap = useLoader(TextureLoader, './src/assets/textura.png');
 
   useFrame(() => {
     if (sphereRef.current) {
