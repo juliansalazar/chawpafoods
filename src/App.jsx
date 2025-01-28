@@ -17,7 +17,7 @@ function App() {
         position="right" // Position of the popup.
         rounded={false} // Rounded corners of the popup.
         url="https://api.whatsapp.com/send?phone=+593995124401&text=Hola%20soy%20un%20cliente%20de%20Chawpa%20Foods!" // WhatsApp URL when clicked.
-        avatar='./public/logo.png' //
+        avatar='/logo.png' //
         chatMessage='Hola 🤝, ¿cómo podemos ayudarte hoy?'
         placeholder='Hola 🤝 quería hacer un pedido Original!'
         />
