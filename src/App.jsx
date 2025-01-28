@@ -8,7 +8,7 @@ import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
 function App() {
   return (
-    <div className="App">
+    <>
       <FloatingWhatsApp
         phoneNumber="+593995124401" // WhatsApp number
         title="Chat con nosotros" // Popup title
@@ -24,7 +24,7 @@ function App() {
       <HeroSection />
       <ProductShowcase />
       <Footer />
-    </div>
+    </>
   );
 }
 

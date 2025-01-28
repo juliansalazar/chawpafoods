@@ -46,7 +46,6 @@ const EquatorialLine = () => {
   const radius = 3.25;
   const segments = 100;
 
-
   for (let i = 0; i <= segments; i++) {
     const angle = (i / segments) * Math.PI * 2;
     const x = radius * Math.cos(angle);
@@ -79,7 +78,7 @@ const EquatorialLine = () => {
 const HeroSection = () => {
   return (
     <div className="hero-section">
-      <h1 style={{ color: 'white', fontSize: '80px' }}>SABORES DE LA MITAD DEL MUNDO</h1>
+      <h1 style={{color: 'white'}} >SABORES DE LA MITAD DEL MUNDO</h1>
       <div className="canvas-container">
         <Canvas>
           {/* Luz ambiental para iluminar todo uniformemente */}

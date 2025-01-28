@@ -1,6 +1,5 @@
 .hero-section {
   text-align: center;
-  padding: 40px 40px;
   background-color: #026b62;
 }
 
@@ -12,4 +11,18 @@
 h1 {
   font-family: 'Gill Sans', sans-serif;
   color: #026b62;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+    margin: 20px;
+    align-content: flex-start;
+    text-align: center;
+  }
+
+  .canvas-container {
+    height: 250px;
+  }
+
 }

@@ -17,6 +17,7 @@
     "react-d3-tree": "^3.6.2",
     "react-dom": "^18.3.1",
     "react-floating-whatsapp": "^5.0.8",
+    "react-use": "^17.6.0",
     "three": "^0.172.0"
   },
   "devDependencies": {

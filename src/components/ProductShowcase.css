@@ -1,9 +1,11 @@
 /* ProductShowcase.css */
 
 .product-showcase {
-    padding: 20px;
-    background-color: #f4f4f4;
     text-align: center;
+  }
+.product-showcase h1 {
+    font-size: 24px;
+    color: #026b62;
   }
   
   .products {
@@ -24,6 +26,7 @@
   }
   
   .product-card img {
+    display: inline-block;
     width: 100%;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -36,20 +39,37 @@
   
   .product-card p {
     font-size: 14px;
-    margin-bottom: 15px;
     color: #026b62;
   }
   
   .product-card span {
     font-size: 18px;
     font-weight: bold;
-    color: #026b62;
-    display: block;
-    margin-bottom: 15px;
+    color: #ff0000;
+    margin-bottom: 20px;
   }
   
   .product-card button {
     width: 100%;
+    margin-top: 5px;
     font-size: 20px;
   }
   
+  @media (max-width: 767px) {
+
+    .product-showcase h1 {
+      font-size: 24px;
+      color: #026b62;
+    }
+
+    h1 h2 h3 {
+      font-size: 16px;
+      color: #026b62;
+    }
+
+    .product-card {
+      width: 80%;
+      height: auto;
+      margin: 10px;
+    }
+  }

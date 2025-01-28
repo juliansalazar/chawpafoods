@@ -38,7 +38,7 @@ function ProductShowcase() {
 
   return (
     <section className="product-showcase" id="products">
-      <h1 style={{fontSize:'60px'}}>Nuestros Productos</h1>
+      <h1 style={{color: 'white'}}>Nuestros Productos</h1>
       <div className="products">
         {products.map(product => (
           <div key={product.id} className="product-card">
@@ -46,8 +46,8 @@ function ProductShowcase() {
             <h1>{product.name}</h1>
             <p>{product.description_es}</p>
             <p>{product.description_en}</p>
-            <span style={{color:'red', fontSize:'40px', fontWeight: 'bold'}}>{product.price}</span>
-            <button onClick={() => handleBuyClick(product.name)}>Comprar - Buy</button>
+            <span>{product.price}</span>
+            <button onClick={() => handleBuyClick(product.name)}>Comprar</button>
           </div>
         ))}
       </div>
