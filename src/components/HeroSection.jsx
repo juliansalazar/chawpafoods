@@ -28,13 +28,14 @@ const PanDeYucaDesformado = () => {
 };
 
 const LogoOnEquator = ({ position }) => {  
-  const texture = useLoader(TextureLoader, '/logo.png'); // Ruta del logo y tamaño grande
+  const texture = useLoader(TextureLoader, '/logo3.svg'); // Ruta del logo y tamaño grande
 
   return (
-    <Plane args={[1.5, 1.5]} position={position}>
+    <Plane args={[2.5, 3.5]} position={position}>
       <meshBasicMaterial 
         map={texture}
         transparent
+        opacity={2.9} // Opacidad del logo
       />
     </Plane>
   );
