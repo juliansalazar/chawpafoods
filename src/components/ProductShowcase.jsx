@@ -4,30 +4,21 @@ import './ProductShowcase.css';
 const products = [
   {
     id: 1,
-    name: 'Original',
-    price: '$24.99',
-    image: '/logo.png',
-    description_es: 'ES: Hojuelas de avena orgánicas y libres de gluten, ideales para tus recetas saludables.',
-    description_en: 'EN: Original Quinoa Avena with Gluten-Free, Organic Blend',
+    name: 'Mezcla Pan de Yuca',
+    presentation: '250 gramos',
+    price: '$6.99 inc. IVA',
+    image: '/mezcla2.jpg',
+    description_es: 'Mezcla para preparar Pan de Yuca, rinde 16 porciones de 25 gramos aprox. Sólo agregue agua.',
   },
   {
     id: 2,
-    name: 'Chocolate',
-    price: '$26.99',
-    image: '/logo.png',
-    description_es: 'ES: Exquisita fusión de quinua con hongos de pino y especias.',
-    description_en: 'EN: Original Chocolate Quinoa with Pine and Spice Blend',
+    name: 'Congelado Natural',
+    presentation: '20 Unidades',
+    price: '$6.00 (Excento de IVA)',
+    image: '/congelado.jpg',
+    description_es: 'Pan de Yuca Tradicional Congelado listo para hornear. Contiene 20 porciones de 25 gramos cada una.',
   },
-
   // Add more products as needed
-  {
-    id: 3,
-    name: 'Fine Herbs',
-    price: '$26.99',
-    image: '/logo.png',
-    description_es: 'ES: Exquisita fusión de quinua con hongos de pino y especias.',
-    description_en: 'EN: Original Fine Herbs Quinoa with Pine and Spice Blend',
-  },
 ];
 
 function ProductShowcase() {
@@ -44,8 +35,8 @@ function ProductShowcase() {
           <div key={product.id} className="product-card">
             <img src={product.image} alt={product.name} />
             <h1>{product.name}</h1>
+            <h3>{product.presentation}</h3>
             <p>{product.description_es}</p>
-            <p>{product.description_en}</p>
             <span>{product.price}</span>
             <button onClick={() => handleBuyClick(product.name)}>Comprar</button>
           </div>
