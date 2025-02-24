@@ -6,17 +6,52 @@ const products = [
     id: 1,
     name: 'Mezcla Pan de Yuca',
     presentation: '250 gramos',
-    price: '$6.99 inc. IVA',
+    price: '$6.99 + Shipping',
     image: '/mezcla2.jpg',
     description_es: 'Mezcla para preparar Pan de Yuca, rinde 16 porciones de 25 gramos aprox. Sólo agregue agua.',
   },
   {
     id: 2,
-    name: 'Congelado Natural',
+    name: 'Natural',
     presentation: '20 Unidades',
-    price: '$6.00 (Excento de IVA)',
+    price: '$6.00 + Shipping',
     image: '/congelado.jpg',
     description_es: 'Pan de Yuca Tradicional Congelado listo para hornear. Contiene 20 porciones de 25 gramos cada una.',
+  },
+  {
+    id: 4,
+    name: 'Nutella',
+    presentation: '10 Unidades',
+    price: '$8.00 + Shipping',
+    image: '/nutella.jpg',
+    description_es: 'Pan de Yuca congelado con tu chocolate preferido, nutella. Contiene 10 porciones de 50 gramos cada una.',
+  },
+  // Add more products as needed
+  // I need to add 4 more, caprese, nutella, fine herbs and milk
+  {
+    id: 3,
+    name: 'Caprese',
+    presentation: '20 Unidades',
+    price: '$7.50 + Shipping',
+    image: '/caprese.jpg',
+    description_es: 'Pan de Yuca congelado con tomate deshidratado y albahaca. Contiene 20 porciones de 25 gramos cada una.',
+  },
+  
+  {
+    id: 5,
+    name: 'Finas Hierbas',
+    presentation: '20 Unidades',
+    price: '$7.00 + Shipping',
+    image: '/finash.jpg',
+    description_es: 'Pan de Yuca congelado con perejíl, estragón, cilantro, tomillo, albahaca y oregano. Contiene 20 porciones de 25 gramos cada una.',
+  },
+  {
+    id: 6,
+    name: 'Manjar de Leche',
+    presentation: '10 Unidades',
+    price: '$8.00 + Shipping',
+    image: '/manjar.jpg',
+    description_es: 'Pan de Yuca congelado con Manjar de Leche manaba. Contiene 10 porciones de 50 gramos cada una.',
   },
   // Add more products as needed
 ];
