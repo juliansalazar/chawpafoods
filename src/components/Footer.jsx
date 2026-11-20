@@ -30,6 +30,13 @@ function Footer() {
           >
             Cómo llegar →
           </a>
+          {cafe.instagram && (
+            <p className="footer__instagram-cafe">
+              <a href={cafe.instagram} target="_blank" rel="noopener noreferrer">
+                {cafe.instagramUsuario || 'Instagram del café'}
+              </a>
+            </p>
+          )}
         </div>
 
         <div>

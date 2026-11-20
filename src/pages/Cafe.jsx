@@ -120,9 +120,17 @@ function Cafe() {
             {(cafe.instagram || cafe.facebook) && (
               <p>
                 Síguenos:{' '}
-                {cafe.instagram && <a href={cafe.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>}
+                {cafe.instagram && (
+                  <a href={cafe.instagram} target="_blank" rel="noopener noreferrer">
+                    Instagram {cafe.instagramUsuario}
+                  </a>
+                )}
                 {cafe.instagram && cafe.facebook && ' · '}
-                {cafe.facebook && <a href={cafe.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>}
+                {cafe.facebook && (
+                  <a href={cafe.facebook} target="_blank" rel="noopener noreferrer">
+                    Facebook
+                  </a>
+                )}
               </p>
             )}
             <div className="acciones">

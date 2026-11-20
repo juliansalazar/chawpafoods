@@ -17,7 +17,8 @@ export const cafe = {
   rangoPrecios: '$1 – $5',
   googleMapsUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(DIRECCION_MAPS)}`,
   googleMapsEmbed: `https://www.google.com/maps?q=${encodeURIComponent(DIRECCION_MAPS)}&output=embed`,
-  instagram: '', // TODO: link del Instagram de Chawpa Café
+  instagram: 'https://www.instagram.com/chawpacafe/',
+  instagramUsuario: '@chawpacafe',
   facebook: '', // TODO: link del Facebook de Chawpa Café
   geo: null, // Opcional: { lat: -0.17, lng: -78.48 } mejora los datos para Google
   fotos: [

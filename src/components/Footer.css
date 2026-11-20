@@ -48,6 +48,10 @@
   }
 }
 
+.footer__instagram-cafe {
+  margin-top: 8px !important;
+}
+
 .footer__legal {
   text-align: center;
   font-size: 0.85rem;
