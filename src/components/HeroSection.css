@@ -4,7 +4,7 @@
   overflow: hidden;
 }
 
-.hero__interior {
+.hero .hero__interior {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   align-items: center;
@@ -38,13 +38,13 @@
 }
 
 @media (max-width: 768px) {
-  .hero__interior {
+  .hero .hero__interior {
     grid-template-columns: 1fr;
     text-align: center;
     min-height: auto;
     gap: 8px;
     padding-top: 20px;
-    padding-bottom: 36px;
+    padding-bottom: 48px;
   }
 
   .hero h1 {
