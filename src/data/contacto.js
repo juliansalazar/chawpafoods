@@ -11,8 +11,8 @@ export function whatsappUrl(mensaje = MENSAJE_BASE) {
 
 export const redes = {
   facebook: 'https://www.facebook.com/chawpa.ec/',
-  instagram: '', // TODO: agregar el Instagram de Chawpa
-  usuario: '', // TODO: usuario para etiquetar en redes, p. ej. '@chawpa.ec'
+  instagram: 'https://www.instagram.com/chawpa.ec/',
+  usuario: '@chawpa.ec', // usuario para etiquetar en redes
 };
 
 // Tiendas donde se venden los productos Chawpa.
