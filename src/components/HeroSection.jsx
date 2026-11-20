@@ -1,102 +1,35 @@
-import React, { useRef } from 'react';
-import { Canvas, useFrame, useLoader } from '@react-three/fiber';
-import { OrbitControls, Sphere, Line, Plane } from '@react-three/drei';
-import { TextureLoader } from 'three';
+import { Link } from 'react-router-dom';
+import HeroOrbita from './HeroOrbita';
 import './HeroSection.css';
 
-const PanDeYucaDesformado = () => {
-  const sphereRef = useRef();
-  const colorMap = useLoader(TextureLoader, '/textura.png');
-
-  useFrame(() => {
-    if (sphereRef.current) {
-      sphereRef.current.rotation.y -= 0.004; // Rotación de la esfera
-    }
-  });
-
+function HeroSection() {
   return (
-    <Sphere ref={sphereRef} args={[1, 100, 200]} scale={[2.9, 2.8, 3.2]}>
-      <meshStandardMaterial
-        color="#A9B08C"
-        roughness={1}
-        metalness={0.3}
-        emissiveIntensity={3}
-        map={colorMap}
-      />
-    </Sphere>
-  );
-};
+    <section className="hero">
+      <div className="contenedor hero__interior">
+        <div className="hero__texto">
+          <span className="eyebrow hero__eyebrow">Pan de yuca sin gluten · Quito</span>
+          <h1>Sabores de la mitad del mundo</h1>
+          <p>
+            Pan de yuca con receta manabita, hecho a mano con ingredientes andinos. Ahora también
+            puedes disfrutarlo recién horneado en <strong>Chawpa Café</strong>, nuestro primer local
+            en La Cerámica.
+          </p>
+          <div className="acciones">
+            <Link to="/cafe" className="boton boton--claro">
+              Visita Chawpa Café
+            </Link>
+            <Link to="/productos" className="boton boton--contorno-claro">
+              Ver productos
+            </Link>
+          </div>
+        </div>
 
-const LogoOnEquator = ({ position }) => {  
-  const texture = useLoader(TextureLoader, '/logo3.svg'); // Ruta del logo y tamaño grande
-
-  return (
-    <Plane args={[2.5, 3.5]} position={position}>
-      <meshBasicMaterial 
-        map={texture}
-        transparent
-        opacity={2.9} // Opacidad del logo
-      />
-    </Plane>
-  );
-};
-
-const EquatorialLine = () => {
-  const lineRef = useRef();
-  const points = [];
-  const radius = 3.25;
-  const segments = 100;
-
-  for (let i = 0; i <= segments; i++) {
-    const angle = (i / segments) * Math.PI * 2;
-    const x = radius * Math.cos(angle);
-    const z = radius * Math.sin(angle);
-    points.push([x, 0, z]);
-  }
-
-  const logoPositions = [
-    [0, 0, radius], // Logo en el eje +Z
-  ];
-
-  useFrame(() => {
-    if (lineRef.current) {
-      lineRef.current.rotation.y -= 0.004; // Rotación de la línea
-    }
-  });
-
-  return (
-    <group ref={lineRef}>
-      {/* Línea ecuatorial */}
-      <Line points={points} color="#026b62" lineWidth={2} />
-      {/* Agregando logos en posiciones específicas */}
-      {logoPositions.map((pos, index) => (
-        <LogoOnEquator key={index} position={pos} />
-      ))}
-    </group>
-  );
-};
-
-const HeroSection = () => {
-  return (
-    <div className="hero-section">
-      <h1 style={{color: 'white'}} >SABORES DE LA MITAD DEL MUNDO</h1>
-      <div className="canvas-container">
-        <Canvas>
-          {/* Luz ambiental para iluminar todo uniformemente */}
-          <ambientLight intensity={0.7} />
-          {/* Luz hemisférica para simular cielo y suelo */}
-          <hemisphereLight 
-            skyColor="#ffffff" // Color del cielo
-            groundColor="#444444" // Color del suelo
-            intensity={10} 
-          />
-          <PanDeYucaDesformado />
-          <EquatorialLine />
-          <OrbitControls enableZoom={false} />
-        </Canvas>
+        <div className="hero__visual">
+          <HeroOrbita />
+        </div>
       </div>
-    </div>
+    </section>
   );
-};
+}
 
 export default HeroSection;

@@ -1,0 +1,196 @@
+/* Estilos compartidos por las páginas. */
+
+.pagina-hero {
+  background: var(--verde);
+  color: var(--crema);
+  padding: 64px 0 56px;
+  text-align: center;
+}
+
+.pagina-hero h1 {
+  color: var(--blanco);
+}
+
+.pagina-hero p {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.pagina-hero .eyebrow {
+  color: var(--oliva);
+}
+
+.dos-columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.imagen-redondeada {
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  height: auto;
+}
+
+/* Puntos de venta / valores */
+.puntos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.puntos__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.puntos__item p,
+.puntos__item ul {
+  color: var(--texto-suave);
+  margin: 0 0 12px;
+}
+
+.puntos__item ul {
+  padding-left: 20px;
+}
+
+.puntos__item a:not(.boton) {
+  font-weight: 700;
+  margin-top: auto;
+  padding: 10px 0;
+}
+
+.puntos__item .boton {
+  margin-top: auto;
+}
+
+.puntos__icono {
+  font-size: 2rem;
+}
+
+.tiendas-titulo {
+  text-align: center;
+  margin: 48px 0 20px;
+  font-size: 1.1rem;
+  color: var(--texto-suave);
+}
+
+/* Filtros de productos */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+/* Detalle de producto */
+.migas {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  margin-bottom: 16px;
+}
+
+.migas a {
+  display: inline-block;
+  padding: 12px 0;
+}
+
+.producto-detalle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.producto-detalle > img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.producto-detalle__precio {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--verde);
+  margin: 0 0 12px;
+}
+
+.producto-detalle__precio small {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--texto-suave);
+}
+
+.etiqueta-nuevo--linea {
+  position: static;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Botón con el naranja de Tipti */
+.boton.boton--tipti {
+  background: #ff9012;
+  border-color: #ff9012;
+  color: #ffffff;
+}
+
+.boton.boton--tipti:hover {
+  background: #e67e00;
+  border-color: #e67e00;
+}
+
+.enlace-guia {
+  display: inline-block;
+  padding: 8px 0;
+  font-weight: 700;
+}
+
+.producto-detalle__nota {
+  background: var(--crema-oscuro);
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.producto-detalle__pasos {
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+
+/* Galería del café */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  justify-items: center;
+  gap: 16px;
+}
+
+/* Proporción 5:4, la de las fotos del local: se ven completas, sin recortar el producto. */
+.galeria img {
+  width: 100%;
+  max-width: 760px;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  object-position: center 80%;
+  border-radius: var(--radio);
+}
+
+@media (max-width: 768px) {
+  .dos-columnas,
+  .producto-detalle {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .seccion {
+    padding: 48px 0;
+  }
+}
