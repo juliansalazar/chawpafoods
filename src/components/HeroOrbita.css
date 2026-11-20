@@ -1,0 +1,100 @@
+.orbita {
+  position: relative;
+  width: min(480px, 100%);
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.orbita__centro {
+  position: absolute;
+  inset: 16%;
+  z-index: 2;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid var(--crema);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.orbita__centro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Variante "planeta": corteza real de pan de yuca con el logo encima. */
+.orbita__centro--planeta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0d3ad url('/textura.webp') center / cover;
+  box-shadow: inset -24px -32px 60px rgba(120, 60, 20, 0.35), 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.orbita__centro--planeta img {
+  width: 48%;
+  height: auto;
+  object-fit: contain;
+}
+
+.orbita__linea {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: var(--oliva);
+  pointer-events: none;
+}
+
+.orbita__linea path {
+  stroke-width: 2px;
+  vector-effect: non-scaling-stroke;
+}
+
+.orbita__linea--atras {
+  z-index: 1;
+  opacity: 0.45;
+}
+
+.orbita__linea--adelante {
+  z-index: 3;
+}
+
+.orbita__latitud {
+  position: absolute;
+  left: 50%;
+  top: 88%; /* debajo de la foto central */
+  transform: translateX(-50%);
+  z-index: 4;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--oliva);
+}
+
+.orbita__luna {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--crema);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  will-change: transform;
+}
+
+@media (max-width: 768px) {
+  .orbita {
+    width: min(260px, 72vw);
+  }
+
+  .orbita__latitud {
+    font-size: 0.65rem;
+  }
+}

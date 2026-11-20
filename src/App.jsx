@@ -1,30 +1,33 @@
-import React from 'react';
-import HeroSection from './components/HeroSection';
-import ProductShowcase from './components/ProductShowcase';
-import AboutUs from './components/AboutUs';
-import Footer from './components/Footer';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout';
+import Inicio from './pages/Inicio';
+import Cafe from './pages/Cafe';
+import Productos from './pages/Productos';
+import Producto from './pages/Producto';
+import Nosotros from './pages/Nosotros';
+import DondeComprar from './pages/DondeComprar';
+import NoEncontrado from './pages/NoEncontrado';
+import Carrito from './pages/Carrito';
+import Pedido from './pages/Pedido';
+import ComoHornear from './pages/ComoHornear';
 import './App.css';
-import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
 function App() {
   return (
-    <>
-      <FloatingWhatsApp
-        phoneNumber="+593995124401" // WhatsApp number
-        title="Chat con nosotros" // Popup title
-        accountName='Chawpa Foods'
-        float={true} // Show/hide the popup
-        position="right" // Position of the popup.
-        rounded={false} // Rounded corners of the popup.
-        url="https://api.whatsapp.com/send?phone=+593995124401&text=Hola%20soy%20un%20cliente%20de%20Chawpa%20Foods!" // WhatsApp URL when clicked.
-        avatar='/logo.png' //
-        chatMessage='Hola 🤝, ¿cómo podemos ayudarte hoy?'
-        placeholder='Hola 🤝 quería hacer un pedido Original!'
-        />
-      <HeroSection />
-      <ProductShowcase />
-      <Footer />
-    </>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Inicio />} />
+        <Route path="cafe" element={<Cafe />} />
+        <Route path="productos" element={<Productos />} />
+        <Route path="productos/:slug" element={<Producto />} />
+        <Route path="nosotros" element={<Nosotros />} />
+        <Route path="donde-comprar" element={<DondeComprar />} />
+        <Route path="como-hornear" element={<ComoHornear />} />
+        <Route path="carrito" element={<Carrito />} />
+        <Route path="pedido" element={<Pedido />} />
+        <Route path="*" element={<NoEncontrado />} />
+      </Route>
+    </Routes>
   );
 }
 

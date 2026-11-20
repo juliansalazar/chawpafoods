@@ -1,46 +1,158 @@
-/* Navbar.css */
-
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--blanco);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.navbar__interior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+
+.navbar__logo img {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar__menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__menu a:not(.boton) {
+  color: var(--texto);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar__menu a:not(.boton):hover,
+.navbar__menu a.active {
+  color: var(--verde);
+  border-bottom-color: var(--verde);
+}
+
+.navbar__cta {
+  padding: 8px 18px;
+}
+
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.navbar__toggle:hover {
+  background: var(--crema);
+}
+
+.navbar__toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--verde);
+}
+
+@media (max-width: 1024px) {
+  .navbar__toggle {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
-  .navbar-logo img {
-    height: 50px;
+
+  .navbar__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 16px var(--gutter) 24px;
+    background: var(--blanco);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
   }
-  
-  .navbar-links {
-    list-style: none;
+
+  .navbar__menu.is-abierto {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-right: 20px;
-    padding: 0;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    background-color: transparent;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    will-change: background-color;
   }
-  
-  .navbar-links li {
-    font-size: 16px;
+
+  .navbar__menu ul {
+    flex-direction: column;
+    gap: 4px;
   }
-  
-  .navbar-links a {
-    color: #026b62;
-    transition: color 0.3s ease;
+
+  .navbar__menu a:not(.boton) {
+    display: block;
+    padding: 10px 0;
   }
-  
-  .navbar-links a:hover {
-    color: #0b776d;
+}
+
+/* Carrito: siempre visible, también en móvil junto al menú hamburguesa. */
+.navbar__carrito {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-left: auto;
+  margin-right: 8px;
+  border-radius: 50%;
+  color: var(--verde);
+  order: 2;
+}
+
+.navbar__carrito:hover {
+  background: var(--crema);
+}
+
+.navbar__contador {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: var(--acento);
+  color: var(--texto);
+  font-size: 0.75rem;
+  font-weight: 900;
+  line-height: 20px;
+  text-align: center;
+}
+
+.navbar__toggle {
+  order: 3;
+}
+
+@media (min-width: 1025px) {
+  .navbar__menu {
+    order: 1;
+    margin-left: auto;
   }
-  
+
+  .navbar__carrito {
+    margin-left: 16px;
+    margin-right: 0;
+  }
+}

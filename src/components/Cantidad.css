@@ -1,0 +1,32 @@
+.cantidad {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--verde);
+  border-radius: 999px;
+  background: var(--blanco);
+  overflow: hidden;
+}
+
+.cantidad__boton {
+  background: transparent;
+  color: var(--verde);
+  border: none;
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.cantidad__boton:hover {
+  background: var(--crema);
+  color: var(--verde-oscuro);
+}
+
+.cantidad__valor {
+  min-width: 28px;
+  text-align: center;
+  font-weight: 900;
+  color: var(--verde);
+}

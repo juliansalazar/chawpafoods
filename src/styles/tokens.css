@@ -1,0 +1,29 @@
+/* Tokens de diseño de Chawpa: colores, tipografía y espaciado. */
+
+@font-face {
+  font-family: 'Gill Sans Chawpa';
+  src: url('../assets/fonts/GILL SANS/GILB____.TTF') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --verde: #026b62;
+  --verde-claro: #0b776d;
+  --verde-oscuro: #014a44;
+  --oliva: #a9b08c;
+  --crema: #f7f3ea;
+  --crema-oscuro: #ece5d6;
+  --blanco: #ffffff;
+  --texto: #1f2d2b;
+  --texto-suave: #55625f;
+  --acento: #d9a441;
+
+  --fuente: 'Lato', system-ui, sans-serif;
+  --fuente-titulos: 'Gill Sans Chawpa', 'Gill Sans', 'Lato', sans-serif;
+
+  --radio: 12px;
+  --sombra: 0 6px 20px rgba(1, 74, 68, 0.1);
+  --ancho-max: 1120px;
+  --gutter: 16px;
+}

@@ -1,0 +1,57 @@
+.horario__estado {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.horario__estado::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.horario__estado.is-abierto {
+  color: #2e9e5b;
+}
+
+.horario__estado.is-cerrado {
+  color: #c0513b;
+}
+
+.footer .horario__estado.is-abierto {
+  color: #7fd6a2;
+}
+
+.footer .horario__estado.is-cerrado {
+  color: #f0a08f;
+}
+
+.horario__tabla {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.horario__tabla th,
+.horario__tabla td {
+  padding: 6px 0;
+  border-bottom: 1px solid var(--crema-oscuro);
+  text-align: left;
+}
+
+.horario__tabla td {
+  text-align: right;
+}
+
+.horario__tabla th {
+  font-weight: 400;
+}
+
+.horario__tabla .is-hoy {
+  font-weight: 700;
+  color: var(--verde);
+}
